@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tartas Artesanales — Caseras y Congeladas</title>
+    <meta name="description" content="Tartas artesanales caseras congeladas, tamaño familiar. Pollo y puerro, calabaza y queso, jamón y queso, verduras grilladas. Pedidos por WhatsApp." />
+    <meta name="theme-color" content="#3A5A28" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tartas Artesanales — Caseras y Congeladas" />
+    <meta property="og:description" content="Tamaño familiar. Pollo y puerro, calabaza y queso, jamón y queso, verduras grilladas. Pedidos por WhatsApp, entregas los domingos en Ayres Plaza." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet" />
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "Tartas Artesanales",
+        "telephone": "+54 11 3326 9400",
+        "areaServed": "Pilar, Buenos Aires",
+        "servesCuisine": "Tartas saladas artesanales congeladas",
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Product", "name": "Tarta de Pollo y Puerro", "description": "Pollo desmenuzado con puerros salteados a fuego lento y un toque de crema. Tamaño familiar, congelada." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Product", "name": "Tarta de Calabaza y Queso", "description": "Calabaza asada con queso fundido y semillas tostadas. Tamaño familiar, congelada." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Product", "name": "Tarta de Jamón y Queso", "description": "Jamón cocido natural y mezcla de quesos. Tamaño familiar, congelada." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Product", "name": "Tarta de Verduras Grilladas", "description": "Morrones, zucchini y berenjenas grilladas con hierbas frescas. Tamaño familiar, congelada." }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#hero" aria-label="Tartas Artesanales — inicio">
+        <svg class="brand-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- palo de amasar -->
+          <rect x="12" y="18" width="24" height="12" rx="6" transform="rotate(-35 24 24)" />
+          <path d="M9 34 l-5 5 M39 9 l5 -5" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-line1">TARTAS</span>
+          <span class="brand-line2">ARTESANALES</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a class="nav-link" href="#hero">Sabores</a>
+        <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+        <a class="nav-link" href="#precios">Precios</a>
+        <a class="nav-link" href="#entregas">Entregas</a>
+      </nav>
+
+      <a
+        class="btn btn--naranja header-cta"
+        href="https://wa.me/541133269400?text=Hola!%20Quiero%20hacer%20un%20pedido"
+        target="_blank"
+        rel="noopener"
+        >Pedir ahora</a
+      >
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="hamburger-icon hamburger-icon--bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 6 h16 M4 12 h16 M4 18 h16" />
+        </svg>
+        <svg class="hamburger-icon hamburger-icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6 l12 12 M18 6 L6 18" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- MENÚ MOBILE -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav" aria-label="Navegación móvil">
+        <a class="mobile-link" href="#hero">Sabores</a>
+        <a class="mobile-link" href="#como-funciona">Cómo funciona</a>
+        <a class="mobile-link" href="#precios">Precios</a>
+        <a class="mobile-link" href="#entregas">Entregas</a>
+      </nav>
+      <a
+        class="btn btn--naranja btn--big mobile-menu-cta"
+        href="https://wa.me/541133269400?text=Hola!%20Quiero%20hacer%20un%20pedido"
+        target="_blank"
+        rel="noopener"
+        >Pedir ahora</a
+      >
+    </div>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a
+      class="wsp-float"
+      id="wsp-float"
+      href="https://wa.me/541133269400?text=Hola!%20Quiero%20hacer%20un%20pedido"
+      target="_blank"
+      rel="noopener"
+      aria-label="Pedir por WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.2.6 2.5.9 3.8.9 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.4c-1.2 0-2.4-.3-3.5-.9l-.6-.3-4.9.9.9-4.7-.3-.6c-.7-1.1-1.1-2.5-1.1-3.8 0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.4-9.5 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z" />
+      </svg>
+    </a>
+
+    <!-- HERO SCROLL SABORES -->
+    <section class="hero-scroll-space" id="hero" aria-label="Nuestros sabores">
+      <div class="hero-stage" data-flavor="pollo-y-puerro">
+        <!-- Los slides se generan desde src/js/hero.js -->
+        <div class="hero-slides"></div>
+
+        <!-- Indicadores -->
+        <div class="hero-dots" aria-hidden="true"></div>
+        <div class="hero-counter" aria-hidden="true">001</div>
+        <div class="hero-hint" aria-hidden="true">SCROLLEÁ ↓</div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section como-funciona" id="como-funciona">
+      <div class="section-inner">
+        <p class="eyebrow">CASERO Y CONGELADO</p>
+        <h2 class="section-title">TENÉ SIEMPRE UNA EN EL FREEZER</h2>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <svg class="step-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <!-- sello / bolsa al vacío -->
+              <path d="M18 14 h28 l4 10 v24 a4 4 0 0 1 -4 4 H18 a4 4 0 0 1 -4 -4 V24 z" />
+              <path d="M14 24 h36" />
+              <path d="M26 34 c4 3 8 3 12 0" />
+              <path d="M26 42 c4 3 8 3 12 0" />
+            </svg>
+            <h3 class="step-title">Cerrada al vacío</h3>
+            <p class="step-text">Cada tarta se envasa al vacío para conservar el sabor y la frescura como recién hecha.</p>
+          </article>
+
+          <article class="step-card">
+            <svg class="step-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <!-- copo de nieve -->
+              <path d="M32 8 v48" />
+              <path d="M11 20 l42 24" />
+              <path d="M53 20 L11 44" />
+              <path d="M32 8 l-6 7 M32 8 l6 7 M32 56 l-6 -7 M32 56 l6 -7" />
+              <path d="M11 20 l9 2 M11 20 l2 9 M53 44 l-9 -2 M53 44 l-2 -9" />
+            </svg>
+            <h3 class="step-title">Directo al freezer</h3>
+            <p class="step-text">Guardala freezada hasta 3 meses. Está lista para cuando la necesites.</p>
+          </article>
+
+          <article class="step-card">
+            <svg class="step-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <!-- horno -->
+              <rect x="10" y="12" width="44" height="40" rx="4" />
+              <path d="M10 24 h44" />
+              <circle cx="18" cy="18" r="1.5" />
+              <circle cx="26" cy="18" r="1.5" />
+              <rect x="18" y="32" width="28" height="14" rx="2" />
+              <path d="M26 30 c0 -3 2 -3 2 -6 M36 30 c0 -3 2 -3 2 -6" />
+            </svg>
+            <h3 class="step-title">Del freezer al horno</h3>
+            <p class="step-text">Sin descongelar: va directo al horno y en minutos tenés una comida casera resuelta.</p>
+          </article>
+        </div>
+
+        <p class="como-punchline">TENELAS FREEZADAS Y TE SALVAN</p>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="section precios" id="precios">
+      <div class="section-inner">
+        <span class="badge-brush badge-brush--naranja">OFERTA LANZAMIENTO</span>
+        <h2 class="section-title">TAMAÑO FAMILIAR, PRECIO DE AMIGO</h2>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <h3 class="price-name">1 SABOR</h3>
+            <p class="price-amount">$25.000</p>
+            <p class="price-text">Una tarta familiar del sabor que elijas</p>
+            <a
+              class="btn btn--wsp"
+              href="https://wa.me/541133269400?text=Hola!%20Quiero%20pedir%20una%20tarta%20de%201%20sabor"
+              target="_blank"
+              rel="noopener"
+              >Pedir por WhatsApp</a
+            >
+          </article>
+
+          <article class="price-card price-card--featured">
+            <span class="badge-brush badge-brush--naranja price-card-badge">MÁS ELEGIDA</span>
+            <h3 class="price-name">2 SABORES</h3>
+            <p class="price-amount">$45.000</p>
+            <p class="price-text">Dos tartas familiares, combiná los sabores que quieras</p>
+            <a
+              class="btn btn--wsp"
+              href="https://wa.me/541133269400?text=Hola!%20Quiero%20pedir%20la%20promo%20de%202%20sabores"
+              target="_blank"
+              rel="noopener"
+              >Pedir por WhatsApp</a
+            >
+          </article>
+        </div>
+
+        <ul class="checks-row">
+          <li class="check-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 13 l5 5 L20 7" />
+            </svg>
+            Tamaño familiar
+          </li>
+          <li class="check-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 13 l5 5 L20 7" />
+            </svg>
+            Cerrada al vacío
+          </li>
+          <li class="check-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 13 l5 5 L20 7" />
+            </svg>
+            Hecha el día del pedido
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ENTREGAS -->
+    <section class="section entregas" id="entregas">
+      <div class="section-inner">
+        <h2 class="section-title entregas-title">
+          <svg class="entregas-dash entregas-dash--left" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 30 L18 12" />
+            <path d="M16 34 L28 16" />
+            <path d="M26 38 L38 20" />
+          </svg>
+          DOMINGOS ENTREGAS EN AYRES PLAZA
+          <svg class="entregas-dash entregas-dash--right" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 20 L18 38" />
+            <path d="M16 16 L28 34" />
+            <path d="M26 12 L38 30" />
+          </svg>
+        </h2>
+        <p class="entregas-text">
+          Todos los domingos entregamos los pedidos en Ayres Plaza, Pilar. Hacé tu pedido por WhatsApp antes del sábado y
+          retiralo el domingo.
+        </p>
+        <a
+          class="btn btn--naranja btn--big"
+          href="https://wa.me/541133269400?text=Hola!%20Quiero%20hacer%20un%20pedido%20para%20retirar%20el%20domingo%20en%20Ayres%20Plaza"
+          target="_blank"
+          rel="noopener"
+          >Hacer mi pedido</a
+        >
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="brand brand--footer">
+            <svg class="brand-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="12" y="18" width="24" height="12" rx="6" transform="rotate(-35 24 24)" />
+              <path d="M9 34 l-5 5 M39 9 l5 -5" />
+            </svg>
+            <span class="brand-text">
+              <span class="brand-line1">TARTAS</span>
+              <span class="brand-line2">ARTESANALES</span>
+            </span>
+          </div>
+          <p class="footer-tagline">Tartas artesanales caseras y congeladas. Tamaño familiar.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Pedidos y consultas</h3>
+          <a
+            class="footer-phone"
+            href="https://wa.me/541133269400?text=Hola!%20Quiero%20hacer%20un%20pedido"
+            target="_blank"
+            rel="noopener"
+            >11 3326 9400</a
+          >
+          <p class="footer-info">Entregas: domingos en Ayres Plaza, Pilar</p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Navegación</h3>
+          <nav class="footer-nav" aria-label="Navegación del pie de página">
+            <a class="footer-link" href="#hero">Sabores</a>
+            <a class="footer-link" href="#como-funciona">Cómo funciona</a>
+            <a class="footer-link" href="#precios">Precios</a>
+            <a class="footer-link" href="#entregas">Entregas</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Tartas Artesanales</p>
+        <a class="footer-credit" href="#">Hecho por VM Studio</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

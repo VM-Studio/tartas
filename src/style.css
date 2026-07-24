@@ -1,0 +1,43 @@
+:root {
+  --color-crema: #F5F0E4;
+  --color-verde-oscuro: #3A5A28;
+  --color-verde-claro: #7A9B4E;
+  --color-naranja: #D65A28;
+  --color-amarillo: #E0A62E;
+  --color-tinta: #2B2419;
+  --color-blanco: #FFFFFF;
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Archivo', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* NO smooth: las animaciones de scroll las controla GSAP */
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--color-crema);
+  color: var(--color-tinta);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
