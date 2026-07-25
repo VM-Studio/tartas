@@ -13,6 +13,9 @@
   /* Altura estable del viewport en móviles: evita franjas y saltos
      cuando la barra del navegador aparece/desaparece */
   height: 100svh;
+  /* Y que siempre cubra el viewport completo cuando la barra se oculta,
+     así la sección siguiente nunca asoma por debajo */
+  min-height: 100dvh;
   width: 100%;
   overflow: hidden;
   position: relative;
