@@ -10,6 +10,8 @@
 
 .hero-stage {
   height: 100vh;
+  /* Altura real del viewport en móviles (evita franjas arriba/abajo) */
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
   position: relative;
