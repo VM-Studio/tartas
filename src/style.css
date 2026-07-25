@@ -1,4 +1,5 @@
 :root {
+  /* Paleta original (la usa el hero) */
   --color-crema: #F5F0E4;
   --color-verde-oscuro: #3A5A28;
   --color-verde-claro: #7A9B4E;
@@ -8,6 +9,14 @@
   --color-blanco: #FFFFFF;
   --font-display: 'Anton', sans-serif;
   --font-body: 'Archivo', sans-serif;
+
+  /* Paleta del rediseño (secciones post-hero) */
+  --fondo: #FAF8F2;
+  --tinta: #211C15;
+  --verde: #3D5A2C;
+  --naranja: #C9531F;
+  --linea: rgba(33, 28, 21, 0.14);
+  --font-serif: 'Fraunces', Georgia, serif;
 }
 
 *, *::before, *::after {
@@ -22,8 +31,8 @@ html {
 }
 
 body {
-  background-color: var(--color-crema);
-  color: var(--color-tinta);
+  background-color: var(--fondo);
+  color: var(--tinta);
   font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

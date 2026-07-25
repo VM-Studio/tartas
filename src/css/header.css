@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Header fijo, menú mobile, botón flotante WhatsApp y footer
+   Header fijo, menú mobile y botón flotante WhatsApp
+   (adaptado a la estética del rediseño minimalista)
    ========================================================================== */
 
 /* --------------------------------- Header -------------------------------- */
@@ -24,12 +25,12 @@
 
 /* Estado sólido: al salir del hero */
 .site-header.is-solid {
-  background: rgba(245, 240, 228, 0.85);
+  background: rgba(250, 248, 242, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: var(--color-tinta);
+  color: var(--tinta);
   text-shadow: none;
-  box-shadow: 0 2px 14px rgba(43, 36, 25, 0.08);
+  box-shadow: 0 2px 14px rgba(33, 28, 21, 0.08);
 }
 
 /* Logo */
@@ -72,8 +73,9 @@
 
 .nav-link {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
   opacity: 0.95;
   transition: opacity 0.2s ease;
 }
@@ -84,10 +86,34 @@
   text-underline-offset: 4px;
 }
 
+/* CTA pill con borde fino: blanco sobre el hero, tinta en modo claro */
 .header-cta {
-  font-size: 0.9rem;
-  padding: 0.7em 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.55em 1.8em;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
   text-shadow: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.site-header .header-cta:hover {
+  background: var(--color-blanco);
+  color: var(--tinta);
+}
+
+.site-header.is-solid .header-cta:hover {
+  background: var(--tinta);
+  color: var(--fondo);
 }
 
 /* Hamburguesa */
@@ -122,11 +148,14 @@
   display: block;
 }
 
+/* La hamburguesa siempre visible sobre el panel crema */
+.hamburger.is-open {
+  color: var(--tinta);
+  text-shadow: none;
+}
+
 /* Compensación del header fijo en los saltos de anchor */
-#hero,
-#como-funciona,
-#precios,
-#entregas {
+#hero {
   scroll-margin-top: 76px;
 }
 
@@ -136,8 +165,8 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: var(--color-verde-oscuro);
-  color: var(--color-crema);
+  background: var(--fondo);
+  color: var(--tinta);
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -158,11 +187,36 @@
 }
 
 .mobile-link {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 9vw, 3rem);
-  text-transform: uppercase;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 8vw, 2.75rem);
+  letter-spacing: -0.01em;
+  color: var(--tinta);
   text-decoration: none;
-  line-height: 1;
+  line-height: 1.1;
+}
+
+.mobile-menu-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 16px 42px;
+  border-radius: 999px;
+  border: 1px solid var(--tinta);
+  color: var(--tinta);
+  background: transparent;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.mobile-menu-cta:hover {
+  background: var(--tinta);
+  color: var(--fondo);
 }
 
 /* --------------------------- Botón flotante WSP --------------------------- */
@@ -194,95 +248,6 @@
   height: 30px;
 }
 
-/* --------------------------------- Footer -------------------------------- */
-
-.site-footer {
-  background: var(--color-tinta);
-  color: var(--color-crema);
-  padding: 4.5rem 6vw 2rem;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-}
-
-.brand--footer {
-  margin-bottom: 1rem;
-  color: var(--color-crema);
-}
-
-.footer-tagline,
-.footer-info {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.8;
-}
-
-.footer-heading {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.footer-phone {
-  display: inline-block;
-  font-weight: 800;
-  font-size: 1.15rem;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.footer-phone:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.footer-link {
-  text-decoration: none;
-  font-size: 0.95rem;
-  opacity: 0.85;
-}
-
-.footer-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.footer-bottom {
-  max-width: 1100px;
-  margin: 3.5rem auto 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(245, 240, 228, 0.15);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
-.footer-credit {
-  text-decoration: none;
-}
-
-.footer-credit:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 /* ---------------------------------- Focus -------------------------------- */
 
 .nav-link:focus-visible,
@@ -291,12 +256,8 @@
 .hamburger:focus-visible,
 .mobile-link:focus-visible,
 .mobile-menu-cta:focus-visible,
-.wsp-float:focus-visible,
-.footer-phone:focus-visible,
-.footer-link:focus-visible,
-.footer-credit:focus-visible,
-.btn:focus-visible {
-  outline: 3px solid var(--color-naranja);
+.wsp-float:focus-visible {
+  outline: 3px solid var(--naranja);
   outline-offset: 3px;
 }
 
@@ -314,21 +275,6 @@
 
   .site-header {
     padding: 0.75rem 1.25rem;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-    text-align: center;
-  }
-
-  .brand--footer {
-    justify-content: center;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
   }
 }
 

@@ -44,12 +44,14 @@ const FLAVORS = [
   },
 ];
 
-// Posiciones/tamaños de las 4 copias del ingrediente flotante por slide
+// Posiciones/tamaños de las copias del ingrediente flotante por slide
 const ING_LAYOUT = [
-  { top: '12%', left: '6%', size: 110, blur: false },
-  { top: '68%', left: '38%', size: 70, blur: true },
-  { top: '18%', left: '58%', size: 55, blur: true },
-  { top: '72%', left: '85%', size: 130, blur: false },
+  { top: '10%', left: '5%', size: 160, blur: false, rotate: -15 },
+  { top: '64%', left: '36%', size: 100, blur: true, rotate: 20 },
+  { top: '14%', left: '56%', size: 80, blur: true, rotate: -30 },
+  { top: '68%', left: '84%', size: 180, blur: false, rotate: 12 },
+  { top: '42%', left: '2%', size: 70, blur: true, rotate: 45 },
+  { top: '6%', left: '86%', size: 120, blur: false, rotate: -25 },
 ];
 
 // ---------------------------------------------------------------------------
@@ -91,6 +93,7 @@ function createIngredient(flavor, layout) {
   wrap.style.left = layout.left;
   wrap.style.width = `${layout.size}px`;
   wrap.style.height = `${layout.size}px`;
+  if (layout.rotate) wrap.style.rotate = `${layout.rotate}deg`;
 
   // Contenedor interno estable (el parallax lo usa aunque la img se
   // reemplace por el fallback)
