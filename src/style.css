@@ -28,6 +28,8 @@
 html {
   /* NO smooth: las animaciones de scroll las controla GSAP */
   scroll-behavior: auto;
+  /* Color detrás de las barras del navegador en iOS (evita franja verde) */
+  background-color: var(--fondo);
 }
 
 body {

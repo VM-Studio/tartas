@@ -54,6 +54,16 @@ const ING_LAYOUT = [
   { top: '6%', left: '86%', size: 120, blur: false, rotate: -25 },
 ];
 
+// Layout para mobile: menos copias, más chicas y bien adentro de la pantalla
+const ING_LAYOUT_MOBILE = [
+  { top: '9%', left: '6%', size: 72, blur: false, rotate: -15 },
+  { top: '12%', left: '74%', size: 60, blur: true, rotate: 25 },
+  { top: '46%', left: '80%', size: 84, blur: false, rotate: 12 },
+  { top: '44%', left: '4%', size: 52, blur: true, rotate: 40 },
+];
+
+const isMobile = () => window.matchMedia('(max-width: 820px)').matches;
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -121,8 +131,9 @@ function buildSlide(flavor, index) {
   slide.className = 'hero-slide' + (index === 0 ? ' is-first' : '');
   slide.dataset.flavor = flavor.slug;
 
-  // Ingredientes flotantes (4 copias)
-  ING_LAYOUT.forEach((layout) => slide.appendChild(createIngredient(flavor, layout)));
+  // Ingredientes flotantes (layout según dispositivo)
+  const layout = isMobile() ? ING_LAYOUT_MOBILE : ING_LAYOUT;
+  layout.forEach((l) => slide.appendChild(createIngredient(flavor, l)));
 
   // Tarta
   const tartWrap = document.createElement('div');
